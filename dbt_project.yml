@@ -34,8 +34,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   staykeeper:
     # Applies to all files under models/example/
-    dimension_table:
+   
+    intermediate_table:
       materialized: table
     fact_table:
+      materialized: table
+    staging_table:
       materialized: table
 

@@ -2,21 +2,21 @@
 WITH sales_orders AS(
     SELECT *
     FROM
-    `dataproject-359115.staykeeper.sales_orders`
+    {{ref('stg_sales_orders')}}
 ),
 
 -- create a CTE for customers table
 customers AS(
     SELECT *
     FROM
-    `dataproject-359115.staykeeper.customers`
+    {{ref('stg_customers')}}
 ),
 
 -- create a CTE for products table
 products AS(
     SELECT *
     FROM
-    `dataproject-359115.staykeeper.products`
+    {{ref('stg_products')}}
 ),
 
 
@@ -24,7 +24,7 @@ products AS(
 regions AS(
     SELECT *
     FROM
-    `dataproject-359115.staykeeper.regions`
+    {{ref('stg_regions')}}
 )
 
 -- Left join all the tables on Sales Orders to get region, product and customer descriptions
