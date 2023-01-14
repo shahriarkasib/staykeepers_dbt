@@ -1,28 +1,33 @@
+--create a CTE for sales orders table
 WITH sales_orders AS(
     SELECT *
     FROM
     `dataproject-359115.staykeeper.sales_orders`
 ),
 
+-- create a CTE for customers table
 customers AS(
     SELECT *
     FROM
     `dataproject-359115.staykeeper.customers`
 ),
 
+-- create a CTE for products table
 products AS(
     SELECT *
     FROM
     `dataproject-359115.staykeeper.products`
 ),
 
+
+-- create a CTE for regions table
 regions AS(
     SELECT *
     FROM
     `dataproject-359115.staykeeper.regions`
 )
 
-
+-- Left join all the tables on Sales Orders to get region, product and customer descriptions
 SELECT 
   so.OrderNumber AS OrderNumber,
   so.OrderDate AS OrderDate,
