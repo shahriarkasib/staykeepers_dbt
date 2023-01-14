@@ -1,0 +1,6 @@
+
+version: 2
+
+models:
+    - name: int_sales
+      description: "Intermediate Sales table with All the information related to an Order"

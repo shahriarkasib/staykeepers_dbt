@@ -1,0 +1,18 @@
+
+version: 2
+
+models:
+    - name: stg_sales_orders
+      description: "Staging Sales orders table with All the information related to an Order"
+    
+    - name: stg_products
+      description: "Staging tables with products information"
+
+    - name: stg_regions
+      description: "Staging tables with regions information"
+
+    - name: stg_customers
+      description: "Staging tables with customers information"
+
+
+    

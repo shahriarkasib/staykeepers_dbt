@@ -1,6 +1,6 @@
 WITH SALES AS(
     SELECT *
-    FROM {{ref('dim_sales')}}
+    FROM {{ref('int_sales')}}
 )
 
 SELECT 
